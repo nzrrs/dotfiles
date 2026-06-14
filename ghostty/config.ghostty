@@ -1,0 +1,18 @@
+
+command = /usr/bin/zsh
+working-directory = inherit
+shell-integration-features = cursor,sudo,title,no-ssh-env,no-ssh-terminfo,path
+scrollback-limit = 33554432
+clipboard-read = allow
+copy-on-select = true
+title="It's showtime, folks!"
+window-padding-x = 0
+window-padding-y = 0
+background-opacity = 0.8
+cursor-text = #FFFFFF
+theme = TokyoNight 
+cursor-opacity = 0.75
+click-repeat-interval = 500
+gtk-single-instance = true
+keybind = ctrl+l=text:cd ~/Desktop/Workspace; ls\n
+auto-update-channel = stable
