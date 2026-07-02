@@ -125,9 +125,23 @@ nvm() {
   nvm "$@"
 }
 
-#aliases
-alias twr='sudo apt update && sudo apt upgrade -y'
+# Aliases
+
+# Clear screen
 alias cls='clear'
+
+# Copy stdin to clipboard
+alias c='xclip -selection clipboard'
+
+# Paste clipboard
+alias p='xclip -selection clipboard -o'
+
+# Copy file content
+alias cf='xclip -selection clipboard <'
+
+# Copy current directory
+alias cwd='pwd | xclip -selection clipboard'
+
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 export PATH="/home/nzr/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/nzr/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
