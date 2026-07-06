@@ -23,7 +23,6 @@ vim.o.numberwidth = 4 -- set number column width to 2 {default 4}
 vim.o.shiftwidth = 4 -- the number of spaces inserted for each indentation
 vim.o.tabstop = 4 -- insert n spaces for a tab
 vim.o.softtabstop = 4 -- Number of spaces that a tab counts for while performing editing operations
-vim.o.expandtab = true -- convert tabs to spaces
 vim.o.cursorline = false -- highlight the current line
 vim.o.splitbelow = true -- force all horizontal splits to go below current window
 vim.o.splitright = true -- force all vertical splits to go to the right of current window

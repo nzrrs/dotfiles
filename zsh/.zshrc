@@ -151,3 +151,4 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH=$HOME/.npm-global/bin:$PATH
 
 fastfetch
+alias mini='~/mini-moulinette/mini-moul.sh'
