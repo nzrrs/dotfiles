@@ -1,21 +1,59 @@
-command = /usr/bin/zsh
+# ===========================
+# Shell
+# ===========================
+
+# Start (or attach to) the main tmux session.
+command = tmux new-session -A -s main
+
 working-directory = inherit
+
 shell-integration-features = cursor,sudo,title,no-ssh-env,no-ssh-terminfo,path
-scrollback-limit = 33554432
-clipboard-read = allow
-copy-on-select = true
+
+# ===========================
+# Appearance
+# ===========================
+
+theme = TokyoNight
+
+font-family = "JetBrainsMono Nerd Font"
+font-size = 12
+
+background-opacity = 0.88
+
+cursor-text = #FFFFFF
+cursor-opacity = 0.75
+
 window-padding-x = 0
 window-padding-y = 0
-background-opacity = 0.6
-cursor-text = #FFFFFF
-theme = TokyoNight 
-cursor-opacity = 0.75
-click-repeat-interval = 500
-gtk-single-instance = true
-keybind = ctrl+l=text:cd ~/Desktop/Workspace; ls\n
-auto-update-channel = stable
-window-width = 122 
+
+# Remove title bar and window decorations.
+window-decoration = false
+
+# Hide Ghostty tabs (tmux handles windows).
+gtk-tabs-location = hidden
+
+# Initial window size (columns × rows).
+window-width = 122
 window-height = 34
-title = "<3"
-font-family = "JetBrainsMono Nerd Font"
-font-size = 12 
+
+# ===========================
+# Terminal
+# ===========================
+
+scrollback-limit = 33554432
+
+clipboard-read = allow
+copy-on-select = true
+
+click-repeat-interval = 500
+
+gtk-single-instance = true
+
+auto-update-channel = stable
+
+# ===========================
+# Keybinds
+# ===========================
+
+# Open workspace.
+keybind = ctrl+l=text:cd ~/Desktop/Workspace; ls\n
