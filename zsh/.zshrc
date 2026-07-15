@@ -152,3 +152,5 @@ export PATH=$HOME/.npm-global/bin:$PATH
 
 fastfetch
 alias mini='~/mini-moulinette/mini-moul.sh'
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
