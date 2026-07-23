@@ -49,8 +49,6 @@ set statusline+=%= " Switch to the right side
 set statusline+=%l " Current line
 set statusline+=/ " Separator
 set statusline+=%L " Total lines
-
-
 " ========================================
 " Keymaps
 " ========================================
@@ -73,7 +71,7 @@ nnoremap <Esc> :noh<CR>
 " save file
 nnoremap <C-s> :w<CR>
 
-" save file without auto-formatting
+" save file wituout auto-formatting
 nnoremap <leader>sn :noautocmd w<CR>
 
 " quit file
@@ -152,17 +150,32 @@ noremap <silent> <leader>e :Lex<CR>
 " Other
 " ========================================
 
-" Syntax highlighting
+call plug#begin('~/.vim/plugged')
+
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'morhetz/gruvbox'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'arcticicestudio/nord-vim'
+Plug 'ghifarit53/tokyonight-vim'
+Plug 'joshdick/onedark.vim'
+Plug 'sainnhe/everforest'
+
+call plug#end()
+
 syntax on
-
-" Colorscheme
-" colorscheme industry
-colorscheme wildcharm
 set background=dark
-" hi Normal ctermbg=NONE guibg=NONE
-" hi NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
-" hi VertSplit guibg=NONE guifg=NONE ctermbg=NONE ctermfg=NONE
+let g:gruvbox_transparent_bg = 1
 
+colorscheme nord
+"  TRANSPARENT BACKGROUND
+hi Normal ctermbg=NONE guibg=NONE
+hi EndOfBuffer ctermbg=NONE guibg=NONE
+hi SignColumn ctermbg=NONE guibg=NONE
+hi LineNr ctermbg=NONE guibg=NONE
+
+" Make selections visible
+" hi Visual cterm=reverse gui=reverse
+hi Visual ctermfg=0 ctermbg=11 gui=reverse cterm=NONE
 " Sync clipboard with OS
 if system('uname -s') == "Darwin\n"
   set clipboard=unnamed "OSX
@@ -191,4 +204,3 @@ let g:netrw_winsize = 25
 augroup netrw_setup | au!
     au FileType netrw nmap <buffer> l <CR>
 augroup END
-
